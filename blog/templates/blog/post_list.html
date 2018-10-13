@@ -9,12 +9,14 @@
         <h1><a href="/">Django Girls Blog</a></h1>
     </div>
 
-
+    <!-- Display post list in template -->
+    <!-- for loop to loop through the posts created in post_views -->
     {% for post in posts %}
     <div>
-        <p>published: {{ post.published_date }}</p>
         <h1><a href="">{{ post.title }}</a></h1>
         <p>{{ post.text|linebreaksbr }}</p>
+        <p><strong>created</strong>: {{ post.created_date }}</p>
+        <p><strong>published</strong>: {{ post.published_date }}</p>
     </div>
     {% endfor %}
 
